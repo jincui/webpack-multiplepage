@@ -1,0 +1,41 @@
+@import '../common/styles/common'
+
+.header-view
+    font-size 1.8rem
+    .navbar
+        box-shadow 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
+        background-color $pinkColor
+        height $headerHeight
+        line-height $headerHeight
+        padding 0 30px
+        margin 0
+        .navbar-collapse.in
+            background-color $blueGreyColor
+        .navbar-toggle
+            padding 0
+            margin 0 10px
+            border none
+        .navbar-brand
+            padding 0
+        .navbar-text
+            margin-top 0
+            margin-bottom 0
+        .navbar-nav
+            >li>a
+                padding 22px 50px
+                color $whiteColor
+                &.active, &:focus, &:hover
+                    color $blueGreyColor
+                    background-color $whiteColor
+            .dropdown-menu
+                width 200px
+                li
+                    margin 10px 0
+                    font-size 1.6rem
+        +sm()
+            padding-left 0
+            padding-right 0
+        .logo-img
+            width 44px
+            height 44px
+            margin ($headerHeight/2 - @height/2) 10px

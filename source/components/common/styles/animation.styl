@@ -1,0 +1,88 @@
+.dissolve-animation
+    &.ng-hide-remove, &.ng-hide-add
+        transition 0.5s linear all
+    &.ng-hide-remove.ng-hide-remove-active, &.ng-hide-add
+        opacity 1
+    &.ng-hide-add.ng-hide-add-active, &.ng-hide-remove
+        opacity 0
+
+.icon-breath-animation
+    animation icon-breath 1.5s ease-in-out infinite
+
+.icon-rotate-animation
+    animation icon-rotate .8s linear infinite
+    margin-right 5px
+
+.loading-progress 
+    position relative
+    height 2px
+    display block
+    width 100%
+    background-color #acece6
+    border-radius 2px
+    margin 0.5rem 0 1rem 0
+    overflow hidden
+    .determinate
+        position absolute
+        background-color inherit
+        top 0
+        left 0
+        bottom 0
+        background-color #26a69a
+        transition width .3s linear
+    .indeterminate
+        background-color #26a69a
+        &:before
+            content ''
+            position absolute
+            top 0
+            left 0
+            bottom 0
+            will-change left, right
+            animation indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite
+        &:after
+            content ''
+            position absolute
+            top 0
+            left 0
+            bottom 0
+            will-change left, right
+            animation indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite
+            animation-delay 1.15s
+
+@keyframes icon-breath
+    from
+        box-shadow 0 0 2px 5px rgba(255, 138, 138, 0.48)
+        opacity 0.5
+    to
+        box-shadow none
+        opacity 1
+
+@keyframes icon-rotate
+    from
+        transform rotate(0deg)
+    to
+        transform rotate(360deg)
+
+@keyframes indeterminate
+    0% 
+        left -35%
+        right 100%
+    60% 
+        left 100%
+        right -90%
+    100% 
+        left 100%
+        right -90%
+    
+@keyframes indeterminate-short
+    0%
+        left -200%
+        right 100%
+    60%
+        left 107%
+        right -8%
+    100%
+        left 107%
+        right -8%
+    

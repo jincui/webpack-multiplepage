@@ -1,0 +1,8 @@
+# common
+.DS_Store
+# node dependencies
+node_modules
+npm-debug.log
+
+# build file
+build

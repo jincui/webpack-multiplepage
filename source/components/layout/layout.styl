@@ -1,0 +1,34 @@
+@import '../common/styles/common'
+
+body
+    font-family "Helvetica Neue",Helvetica,'Hiragino Sans GB','Microsoft Yahei',Arial,sans-serif
+    .wrapper
+        background-size cover
+        /*.ie &
+            height 100vh
+        .no-ie &
+            min-height 100vh*/
+.content
+    margin-top $headerHeight
+    margin-bottom $footerHeight
+    +sm()
+        margin-top $headerHeightForMobile
+    .main-content
+        overflow hidden
+        .main-view
+            padding 0.5rem 0 1rem 0
+            +sm()
+                margin-left 8px
+                margin-right 8px
+            &.ng-enter
+                // animation bounceIn .8s
+            .full-width
+                padding 10px 30px 20px 30px
+                width 100%
+
+.dropdown-content
+    width auto !important
+
+.select-dropdown
+    > li.disabled > span
+        color rgba(0, 0, 0, .3)
