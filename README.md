@@ -45,7 +45,7 @@ use webpack to build multiple-page-static application with stylus and jade
   - about   ＃about模块
     about.****.js   
     about.****.css
-    about.html
+    index.html
   + help
   - index
     index.****.js
