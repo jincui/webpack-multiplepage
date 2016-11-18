@@ -149,9 +149,9 @@ module.exports = {
 // Object.keys(pages).forEach(function(pageName){
 //    plugins.push(
 //      new HtmlWebpackPlugin({
-//          template: './source/pages/'+ pageName+ '/' pageName + '.jade',
+//          template: './source/pages/'+ pageName+ '/' + pageName + '.jade',
 //          filename: pageName +'.html',
-//          chunks: [ 'vendor', pageName],
+//          chunks: [ 'common', pageName],
 //      })
 //    );
 // });
